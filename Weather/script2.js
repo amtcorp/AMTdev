@@ -16,6 +16,7 @@ document.querySelector('#bottommsg').classList.add('animate');
  setTimeout(() => {
         entry.target.classList.add('animate'); // Ajoutez une classe CSS pour l'animation
 document.querySelector('.container1').style.backdropFilter = "blur(3px)";
+document.querySelector('.container1').style['-webkit-backdrop-filter'] = "blur(3px)";
     }, 300);
 
       }
