@@ -1,0 +1,278 @@
+:root {
+    --element-accent-1: rgb(66 66 69 / 70%);
+    --background-1: #101010;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height : 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2d2d2de0;
+    border-radius: 8px;
+}
+
+* {
+    /* border: 1px solid #3498db; */
+}
+
+alinea{
+    padding: 10px 0 0 0;
+    margin-block: 0;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;
+    font-family: Arial;
+    font-size: 50px;
+    background: url(./assets/backgrounds/presentation.png);
+}
+
+header {
+    position: absolute;
+    display: flex;
+    background: var(--background-1);
+    top: 10px;
+    left: 10px;
+    border-radius: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    max-width: 75%;
+    z-index: 1;
+    background: #ffffff4d;
+    align-items: center;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.24);
+}
+
+header ::-webkit-scrollbar {
+    height: 2px;
+}
+
+header #logo {
+    height: 40px;
+    padding: 5px;
+    filter: invert(1);
+    transition: filter 700ms;
+}
+
+header #logo:hover {
+    filter: drop-shadow(1px 1px 4px #038de9);
+    transition: filter 300ms;
+}
+
+header #cat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    overflow: auto;
+    padding: 4px 0px;
+    justify-content: flex-start;
+}
+
+#cat button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    display: flex;
+    height: 40px;
+    background: transparent;
+    align-items: center;
+    margin: 0px 21px;
+    border-radius : 5px;
+    box-shadow: 0px 0px 0px transparent;
+    transition: background 1000ms , box-shadow 300ms , border-radius 0.5s ease , height 0.5s ease , margin 0.5s ease;
+    /* height: 0; */
+}
+
+header.reduce #cat button {
+    margin: 0px 0px;
+    height: 0;
+    transition: background 1000ms, box-shadow 300ms, border-radius 0.5s ease, height 0.5s ease, margin 0.5s ease;
+}
+
+#cat button:hover {
+    background: #038de9;
+    transition : background 300ms , box-shadow 300ms , border-radius 0.5s ease;
+    border-radius : 15px;
+    border : 0px;
+    box-shadow: 2px 2px 3px #03568e;
+}
+
+#cat button img {
+    height: 80%;
+    filter: drop-shadow(2px 2px 4px #00000080)  invert(1);
+    transition : filter 300ms;
+}
+
+#cat button:hover img {
+    
+    transition : filter 300ms ;
+}
+
+
+#bottommsg {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    left: 25%;
+    right: 25%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    color: white;
+    font-size: 24px;
+    transition: translate 0.5s ease;
+    translate: 0% 115%;
+    filter: drop-shadow(2px 2px 4px #00000080);
+}
+
+#bottommsg.animate {
+    transition: translate 0.5s ease;
+    translate: 0% 0%;
+}
+
+#bottommsg img {
+    height : 24px;
+}
+
+#bottommsg img.animate {
+    transform: rotateX(180deg);
+    transition: transform 0.5s;
+}
+
+#bottommsg.animate img {
+    translate: 0px -25%;
+    transform: rotateX(0deg);
+    transition: transform 0.7s;
+}
+
+#controlbutton {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 1;
+    border: 0px;
+    border-radius: 22.5%;
+    background: #2d2d2d99;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transition : background-color 500ms;
+    /* box-shadow: 0px 0px 3px white; */
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.24);
+    background: #ffffff4d;
+}
+
+#controlbutton.ctrlbutton2 {
+    right: 80px;
+}
+
+#controlbutton:hover {
+    transition : background-color 500ms;
+    background : #038de9;
+}
+
+#controlbutton img {
+    height: 80%;
+    filter: drop-shadow(2px 2px 4px #00000080);
+}
+
+#controlbutton:hover img {
+    filter: drop-shadow(1px 0px 1px white);
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+}
+
+container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-1);
+    color: white;
+}
+
+container.container1 {
+    background: transparent;
+    backdrop-filter: none;
+    transition: backdrop-filter 1s ease;
+}
+
+container.container1.animate {
+    background: transparent;
+    transition: backdrop-filter 1.5s;
+}
+
+container.container1 img {
+    scale: 0.9;
+    transition: scale 0.5s ease;
+}
+
+container.container1.animate img {
+    scale: 1;
+    transition: scale 0.5s ease, filter 500ms;
+    position: sticky;
+    top: 25%;
+    filter: drop-shadow(2px 2px 4px #00000080);
+}
+
+container.container2 {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    scale: 0.85;
+    position: relative;
+    transform: translate(0px, 18px);
+    background: #ffffff;
+    transition: transform 0.5s ease, scale 0.5s ease, border-radius 1.5s ease, background-color 1500ms;
+}
+
+container.container2.animate {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    scale: 1;
+    position: unset;
+    transform: translate(0px, 0px);
+    transition: transform 0.5s ease, scale 0.5s ease, border-radius 1.5s ease, background-color 1500ms;
+    background: #ffffff4d;
+}
+
+.container3 {
+    text-shadow: none;
+    color: black;
+    background: white;
+}
+
+#extandiconui {
+    display: flex;
+    position: absolute;
+    top: 21px;
+    background: lightgrey;
+    left: 50%;
+    width: 50px;
+    height: 8px;
+    border-radius: 20px;
+    translate : -25px 0px;
+    transition : scale 0.5s ease;
+}
+
+container.container2.animate #extandiconui {
+    scale : 0;
+    transition : scale 0.5s ease;
+}
