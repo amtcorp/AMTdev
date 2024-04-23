@@ -223,6 +223,7 @@ container.container1.animate {
 container.container1 img {
     scale: 0.9;
     transition: scale 0.5s ease;
+    max-width: 100%;
 }
 
 container.container1.animate img {
